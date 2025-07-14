@@ -143,7 +143,7 @@
                 opacity: 1;
             }
             100% {
-                transform: rotate(45deg) scale(1) translate(var(--x), var(--y));
+                transform: rotate(45deg) scale(1.5) translate(var(--x), var(--y));
                 opacity: 0;
             }
         }
@@ -221,14 +221,14 @@
             const explosion = document.getElementById('heartExplosion');
             explosion.innerHTML = '';
             
-            // Create 12 explosion hearts
-            for (let i = 0; i < 12; i++) {
+            // Create 20 explosion hearts
+            for (let i = 0; i < 20; i++) {
                 const explosionHeart = document.createElement('div');
                 explosionHeart.className = 'explosion-heart';
                 
                 // Calculate random direction and distance
-                const angle = (i * 30) + Math.random() * 30;
-                const distance = 80 + Math.random() * 40;
+                const angle = (i * 18) + Math.random() * 18;
+                const distance = 120 + Math.random() * 80;
                 const x = Math.cos(angle * Math.PI / 180) * distance;
                 const y = Math.sin(angle * Math.PI / 180) * distance;
                 
